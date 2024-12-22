@@ -9,5 +9,16 @@
     "firefox:scripts": [
       "background.ts"
     ]
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "./content/content.ts"
+      ]
+    }
+  ]
 }
