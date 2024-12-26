@@ -1,35 +1,33 @@
-# [projectName]
+This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
 
-> [templateDescription]
+## Getting Started
 
-## Available Scripts
-
-In the project directory, you can run the following scripts:
-
-### [runCommand] dev
-
-**Development Mode**: This command runs your extension in development mode. It will launch a new browser instance with your extension loaded. The page will automatically reload whenever you make changes to your code, allowing for a smooth development experience.
+First, run the development server:
 
 ```bash
-[runCommand] dev
+pnpm dev
+# or
+npm run dev
 ```
 
-### [runCommand] start
+Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
 
-**Production Preview**: This command runs your extension in production mode. It will launch a new browser instance with your extension loaded, simulating the environment and behavior of your extension as it will appear once published.
+You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+
+For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+
+## Making production build
+
+Run the following:
 
 ```bash
-[runCommand] start
+pnpm build
+# or
+npm run build
 ```
 
-### [runCommand] build
+This should create a production bundle for your extension, ready to be zipped and published to the stores.
 
-**Build for Production**: This command builds your extension for production. It optimizes and bundles your extension, preparing it for deployment to the target browser's store.
+## Submit to the webstores
 
-```bash
-[runCommand] build
-```
-
-## Learn More
-
-To learn more about creating cross-browser extensions with Extension.js, visit the [official documentation](https://extension.js.org).
+The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!

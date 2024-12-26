@@ -1,32 +1,31 @@
 {
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/extension-js/extension.git",
-    "directory": "examples/init"
-  },
   "name": "page-exp",
-  "description": "A Page Export tools",
+  "displayName": "Page exp",
   "version": "0.0.1",
-  "keywords": [
-    "extension",
-    "browser-extension",
-    "web-extension",
-    "template"
-  ],
+  "description": "A basic Plasmo extension.",
+  "author": "pingfury@outlook.com",
   "scripts": {
-    "dev": "extension dev",
-    "start": "extension start",
-    "build": "extension build"
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
   },
-  "dependencies": {},
+  "dependencies": {
+    "plasmo": "0.89.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
   "devDependencies": {
-    "extension": "latest"
+    "@ianvs/prettier-plugin-sort-imports": "4.1.1",
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "prettier": "3.2.4",
+    "typescript": "5.3.3"
   },
-  "private": true,
-  "author": {
-    "name": "pingfury",
-    "email": "pingfury@outlook.com",
-    "url": "https://www.pingfury.top"
+  "manifest": {
+    "host_permissions": [
+      "https://*/*"
+    ]
   }
 }
